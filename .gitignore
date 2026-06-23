@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+*.env
+*.geojson
+build_*.R
+CLAUDE.md
+REVISION_NOTES.md
+maintenance*.md
+notes*.md

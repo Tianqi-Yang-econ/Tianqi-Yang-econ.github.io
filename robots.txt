@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tianqi-yang-econ.github.io/sitemap.xml
