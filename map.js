@@ -8,8 +8,8 @@
 
 const CITIES = [
   // tier 1 — primary
-  { en: "Milan",     zh: "米兰",  lon:    9.19, lat: 45.46, type: "long_term", tier: 1, dir: "right" },
-  { en: "Zhenjiang", zh: "镇江",  lon:  119.45, lat: 32.20, type: "current",   tier: 1, dir: "right" },
+  { en: "Milan",     zh: "米兰",  lon:    9.19, lat: 45.46, type: "current",   tier: 1, dir: "right" },
+  { en: "Zhenjiang", zh: "镇江",  lon:  119.45, lat: 32.20, type: "long_term", tier: 1, dir: "right" },
   { en: "Wuhan",     zh: "武汉",  lon:  114.30, lat: 30.59, type: "long_term", tier: 1, dir: "bottom" },
 
   // tier 2
@@ -121,8 +121,9 @@ L.geoJSON(WORLD_GEOJSON, {
   interactive: false,
 }).addTo(map);
 
-// admin-1 (provinces) — hidden at low zoom, fades in
-const provinceLayer = L.geoJSON(PROVINCES_GEOJSON, {
+// Internal administrative boundaries only; outer edges come from WORLD_GEOJSON.
+// Hidden at low zoom, fades in.
+const provinceLayer = L.geoJSON(PROVINCE_BORDERS_GEOJSON, {
   style: {
     fill:    false,
     color:   "#888888",
